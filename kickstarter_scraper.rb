@@ -1,5 +1,6 @@
 # require libraries/modules here
-kickstarter = Nokogiri ::HTML(html)
+require'nokogiri'
 def create_project_hash
   # write your code here
+  kickstarter = Nokogiri ::HTML(html)
 end
