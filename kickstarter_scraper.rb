@@ -1,6 +1,5 @@
 # require libraries/modules here
 require'nokogiri'
-require 'pry'
 
 def create_project_hash
   # write your code here
@@ -15,7 +14,7 @@ def create_project_hash
     :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
     :description => project.css("p.bbcard_blub").text,
     :location => project.css("ul.project-meta span.locstion-name").text,
-    :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i}
+    :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i }
 end
 projects
 end
